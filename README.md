@@ -1,6 +1,14 @@
 # lab-eng-software
 Repositório referente a matéria de engenharia de software
 
+nome do grupo: 
+- Grupo 8
+
+nome dos integrantes:
+- Ricardo de Arruda
+- Guilherme Stabach Salustiano
+- Sander Söhngen Rodrigues
+
 ## Setup
 
 Clone o repositório:
