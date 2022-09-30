@@ -3,6 +3,18 @@ Repositório referente a matéria de engenharia de software
 
 ## Setup
 
+Clone o repositório:
+
+```bash
+git clone git@github.com:guissalustiano/lab-eng-software.git
+```
+
+Mude para o diretório do projeto:
+
+```bash
+cd lab-eng-software
+```
+
 Crie o Venv:
 ```bash
 python -m venv env
