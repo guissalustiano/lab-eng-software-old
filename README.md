@@ -29,7 +29,7 @@ source env/bin/activate
 
 No windows:
 ```
-source env/Scripts/Activate.ps1
+./env/Scripts/Activate.ps1
 ```
 
 Instale as dependências:
@@ -37,9 +37,11 @@ Instale as dependências:
 pip install -r requirements.txt
 ```
 
+**O passo a seguir so é necessário se o projeto não estiver sido criado no repositório ainda**
+
 Crie o projeto no django
 ```
-django-admin startproject MyProj
+django-admin startproject src
 ```
 
 ## Execução
@@ -56,3 +58,4 @@ iniciar o servidor
 python manage.py runserver
 ```
 
+Visit a url http://127.0.0.1:8000/FIRST para acessar a aplicação.
