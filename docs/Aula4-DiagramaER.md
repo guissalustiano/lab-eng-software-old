@@ -7,6 +7,7 @@ erDiagram
     }
     Company{
       string name
+      string website
     }
 		Route {
        string code
@@ -27,6 +28,6 @@ erDiagram
     Route ||--o{ Flight : Has
     Route ||--o{ AirPort : Has
     Route ||--o{ AirPort : Has
-    Route }o--o{ Company : Has
+    Route ||--o{ Company : Has
     Company ||..o{ AirPort : Operates
 ```
