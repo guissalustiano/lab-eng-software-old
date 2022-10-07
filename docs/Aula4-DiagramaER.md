@@ -7,6 +7,7 @@ erDiagram
     }
     Company{
       string name
+      string website
     }
 		Route {
        string code
