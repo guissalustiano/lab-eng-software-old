@@ -59,6 +59,9 @@ python manage.py startapp flight_monitoring_app
 
 ## Execução
 
+### Inicialização do servidor
+
+```
 Após o setup, para executar o projeto, basta executar os seguintes comandos para executar a aplicação:
 
 mudar para a pasta src
@@ -71,14 +74,21 @@ iniciar o servidor
 python manage.py runserver
 ```
 
-Visit a url http://127.0.0.1:8000/FIRST para acessar a aplicação.
+Visite a url http://127.0.0.1:8000/FIRST para testar a aplicação.
 
-## Organização
+### Migração
 
-```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
+Para executar as migrações, crie as migrações com:
+```
+python manage.py makemigrations
+```
+
+Se você quiser ver o que o Django está criando, você pode usar o comando:
+```
+python manage.py sqlmigrate flight_monitoring_app numero # numero pode ser 0001, 0002, etc
+```
+
+E em seguida, execute as migrações com:
+```
+python manage.py migrate
 ```
