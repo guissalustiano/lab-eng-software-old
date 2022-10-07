@@ -45,11 +45,16 @@ Instale as dependências:
 pip install -r requirements.txt
 ```
 
-**O passo a seguir so é necessário se o projeto não estiver sido criado no repositório ainda**
+**Os passos a seguir so são necessários se o projeto não estiver sido criado no repositório ainda**
 
 Crie o projeto no django
 ```
-django-admin startproject src
+django-admin startproject aviation_website_project
+```
+
+Crie o projeto no django
+```
+python manage.py startapp flight_monitoring_app
 ```
 
 ## Execução
@@ -58,7 +63,7 @@ Após o setup, para executar o projeto, basta executar os seguintes comandos par
 
 mudar para a pasta src
 ```
-cd src
+cd aviation_website_project
 ```
 
 iniciar o servidor
@@ -67,3 +72,13 @@ python manage.py runserver
 ```
 
 Visit a url http://127.0.0.1:8000/FIRST para acessar a aplicação.
+
+## Organização
+
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```

@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 # Create your views here.
-def bookview(request):
+def first_view(request):
 	return render(request, "FIRST.html")
