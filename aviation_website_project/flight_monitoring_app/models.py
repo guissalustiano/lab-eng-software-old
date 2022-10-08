@@ -14,15 +14,6 @@ class Company(models.Model):
 	name = models.CharField(max_length=256, null=False)
 	website = models.CharField(max_length=512, null=False)
 
-class Flight(models.Model):
-	code = models.CharField(max_length=32, unique=True, null=False)
-	status = models.CharField(max_length=32, null=False)
-	departure = models.DateTimeField(null=False)
-	arrival = models.DateTimeField(null=False)
-
-	class Meta:
-		db_table = 'company'
-
 class Route(models.Model):
 
 	class DayOfWeek(models.IntegerChoices):
@@ -44,3 +35,13 @@ class Route(models.Model):
 
 	class Meta:
 		db_table = 'route'
+
+class Flight(models.Model):
+	code = models.CharField(max_length=32, unique=True, null=False)
+	status = models.CharField(max_length=32, null=False)
+	departure = models.DateTimeField(null=False)
+	arrival = models.DateTimeField(null=False)
+	route = models.ForeignKey(Route, on_delete=models.CASCADE)
+
+	class Meta:
+		db_table = 'company'
