@@ -92,3 +92,10 @@ E em seguida, execute as migrações com:
 ```
 python manage.py migrate
 ```
+
+## Testes
+
+Para rodar os testes, execute o comando:
+```
+python manage.py test
+```
