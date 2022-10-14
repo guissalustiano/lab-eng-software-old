@@ -61,7 +61,7 @@ python manage.py startapp flight_monitoring_app
 
 ### Inicialização do servidor
 
-```
+
 Após o setup, para executar o projeto, basta executar os seguintes comandos para executar a aplicação:
 
 mudar para a pasta src
