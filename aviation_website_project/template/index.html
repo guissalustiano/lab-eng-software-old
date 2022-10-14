@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h2>Ola Maria</h2>
+<h2>Ola {{name}}</h2>
+
+{% if policy.route %}
+<a href="/route">
     <button>Gerenciar rotas</button>
-    <button>Atualizar status</button>
+</a>
+{% endif %}
+
+{% if policy.flight %}
+<a href="/flight">
+    <button>Atualizar status do voo</button>
+</a>
+{% endif %}
+
+{% if policy.report %}
+<a href="/report/filter">
     <button>Gerar relatórios</button>
-</body>
-</html>
+</a>
+{% endif %}
