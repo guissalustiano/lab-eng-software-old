@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .forms import LoginForm
+from .forms import LoginForm, RouteSearchForm
 
 # Create your views here.
 def first_view(request):
@@ -35,7 +35,7 @@ def index_view(request):
 					"index.html", 
 					{'form': form, 'policy': policy, 'name': login}
 				)
-	return HttpResponseRedirect('login')
+	return HttpResponseRedirect('/login')
 
 
 def route_update_view(request):
@@ -46,6 +46,12 @@ def route_code_view(request, code: str):
 	return render(request, "route/[code].html", context)
 
 def route_search_view(request):
+	if request.method == 'POST':
+		form = RouteSearchForm(request.POST)
+		if form.is_valid():
+			name = form.cleaned_data['name']
+			return HttpResponseRedirect(f'/route/{name}')
+
 	return render(request, "route/search.html")
 
 def report_filter_view(request):
