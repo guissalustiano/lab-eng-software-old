@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciamento de Rotas</title>
-</head>
-<body>
-    <h1>Gerenciamento de rotas</h1>
-    <div>
-        <input type="text">
-        <button>Buscar</button>
-    </div>
+<h1>Gerenciamento status do voo</h1>
 
-    <div>
-        <button>Cadastrar</button>
-    </div>
-</body>
-</html>
+<form action="/flight" method="post"></form>
+<div>
+    {% csrf_token %}
+    <input type="text" name="name" id="name">
+    <button>Buscar</button>
+</div>
+
+<a href="/flight/create">
+    <button>Cadastrar</button>
+</a>
+
+<a href="/">
+    <button>Cancelar</button>
+</a>

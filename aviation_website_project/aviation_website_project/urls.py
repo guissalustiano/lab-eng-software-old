@@ -67,7 +67,7 @@ urlpatterns = [
     path("report/filter", views.report_filter_view),
     path("report/result", views.report_result_view),
     path("flight/create", views.flight_create_view),
-    path("flight/index", views.flight_index_view),
+    path("flight", views.flight_index_view),
     path("flight/update", views.flight_update_view),
     path("flight/<str:code>", views.flight_code_view),
 ]
