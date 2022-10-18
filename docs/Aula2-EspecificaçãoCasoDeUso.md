@@ -77,3 +77,21 @@ Voo: Execução de uma rota do voo, com horário de saída, horário de chegada 
 3. Evento iniciador: Gerente solicita emissão de relatório
 4. Atores: Gerente de operações
 5. Pré-condições: Ter registros de voos
+6. Sequência de eventos: 
+   1 Gerente solicita geração de relatório ao sistema
+   2 Sistema mostra os tipos de relatório
+   3 Gerente seleciona “por companhia aérea”
+   4 Sistema exibe opções de filtro: 	, período de partida/chegada, aeroporto de origem/destino, 
+   5 Gerente escolhe filtros para o relatório
+   6 Sistema exibe opções de filtro escolhidos e tipo de relatório
+   7 Gerente solicita a emissão de relatório
+   8 Sistema gera pdf com as informações solicitadas
+   9 Fim do caso de uso
+7. Pós-condição:
+   1 Relatório em PDF gerado pelo sistema
+8. Fluxo alternativo
+   8.1 Fluxo Alternativo 1:
+      8.1.1 Gerente seleciona “por destino”
+      8.1.2 Volta para 6.3
+9. Exceções:
+   9.1 Nenhum voo encontrado
