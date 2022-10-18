@@ -8,5 +8,33 @@
 </head>
 <body>
     <h2>Filtro Relatório</h2>
+
+    <form action="/report/filter" method="post">
+        {% csrf_token %}
+        <select name="type" id="type">
+            <option value="">Tipo do Relatório</option>
+            <option value="company">Por companhia area</option>
+            <option value="airport">Por Aeroporto</option>
+        </select>
+        <input type="date" name="arrive_date" id="arrive_date" placeholder="Data de decolagem">
+        <input type="date" name="departure_date" id="departure_date" placeholder="Data de aterrissagem">
+        <input type="date" name="arrive_airport" id="arrive_airport" placeholder="Aeroporto aterrissagem">
+        <input type="date" name="departure_airport" id="departure_airport" placeholder="Aeroporto aterrissagem">
+        <select name="type" id="type">
+            <option value="">Companhia</option>
+            <option value="company">Azul</option>
+            <option value="airport">Latam</option>
+        </select>
+        <select name="type" id="type">
+            <option value="">Dia da semana</option>
+            <option value="company">Azul</option>
+            <option value="airport">Latam</option>
+        </select>
+        <input type="submit" value="Gerar Relatório">
+    </form>
+
+    <a href="/">
+        <button>Cancelar</button>
+    </a>
 </body>
 </html>

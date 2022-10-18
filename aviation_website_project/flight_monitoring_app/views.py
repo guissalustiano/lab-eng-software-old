@@ -55,6 +55,9 @@ def route_search_view(request):
 	return render(request, "route/search.html")
 
 def report_filter_view(request):
+	if request.method == 'POST':
+		return HttpResponseRedirect(f'/report/result')
+
 	return render(request, "report/filter.html")
 
 def report_result_view(request):
