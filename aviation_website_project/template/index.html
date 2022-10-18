@@ -1,19 +1,33 @@
-<h2>Ola {{name}}</h2>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-{% if policy.route %}
-<a href="/route/search">
-    <button>Gerenciar rotas</button>
-</a>
-{% endif %}
+<div class="container">
+    <h2>Ola {{name}}</h2>
 
-{% if policy.flight %}
-<a href="/flight">
-    <button>Atualizar status do voo</button>
-</a>
-{% endif %}
-
-{% if policy.report %}
-<a href="/report/filter">
-    <button>Gerar relatórios</button>
-</a>
-{% endif %}
+    <div class="row">
+        <div class="col s12 m4">
+            {% if policy.route %}
+            <a class="center waves-effect waves-light btn-large" href="/route/search">
+                Gerenciar rotas
+            </a>
+            {% endif %}
+        </div>
+        
+        
+        <div class="col s12 m4">
+            {% if policy.flight %}
+            <a class="center waves-effect waves-light btn-large"  href="/flight">
+                Atualizar status do voo
+            </a>
+            {% endif %}
+        </div>
+        
+        <div class="col s12 m4">
+            {% if policy.report %}
+            <a class="center waves-effect waves-light btn-large"  href="/report/filter">
+                Gerar relatórios
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
