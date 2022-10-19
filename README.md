@@ -74,7 +74,15 @@ iniciar o servidor
 python manage.py runserver
 ```
 
-Visite a url http://127.0.0.1:8000/FIRST para testar a aplicação.
+Visite a url http://127.0.0.1:8000/ para testar a aplicação.
+
+Alguns logins que você pode utilizar são:
+  - manager@mail.com
+  - pilot@mail.com
+  - operator@mail.com
+  - admin@mail.com
+
+Qualquer senha irá funcionar
 
 ### Migração
 
